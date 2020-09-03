@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Điểm sinh viên</title>
+    </head>
+    <body>
+        <script>
+            let nhapdiemvatly=prompt('nhập điểm vật lý');
+            let nhapdiemhoahoc=prompt('nhập điểm hóa học');
+            let nhapdiemsinhhoc=prompt('nhập điểm sinh học');
+            let diemvatly=parseInt(nhapdiemvatly);
+            let diemhoahoc=parseInt(nhapdiemhoahoc);
+            let diemsinhhoc=parseInt(nhapdiemsinhhoc);
+            let DTB=((diemvatly+diemhoahoc+diemsinhhoc)/3);
+            let tong=(diemvatly+diemhoahoc+diemsinhhoc);
+            document.write('điểm trung bình = '+ DTB);
+            document.write('<br>');
+            document.write('Tổng điểm = '+ tong);
+        </script>
+    </body>
+</html>
