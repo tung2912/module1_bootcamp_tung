@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ĐĂNG KÍ HỌC VIÊN</title>
+        <style>
+            form{
+                width: 300px;
+                margin: 40px auto;
+                background-color: rgb(255, 237, 159);
+            }
+            form div{
+                margin: 0px 0px 5px 0px;
+                
+            }
+            .label1{
+                display: block;
+                width: 80px;
+                color: blue;
+                float: left;
+                clear: left;
+            }
+            fieldset{
+                width:fit-content;
+            }
+        </style>
+    </head>
+    <body> 
+        <div id="wrapper">
+            <form id="form" action="get">
+            <fieldset>
+            <h1 style="text-align: center;">ĐĂNG KÍ HỌC VIÊN</h1>
+            <div>
+                <label for="name" class="label1">Họ và tên</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="dayofbirth" class="label1">Ngày sinh</label>
+                <input type="text" name="dayofbirth" id="dayofbirth">
+            </div>
+            <div>
+                <label for="gender" class="label1">Giới tính</label>
+                <label for="Gender"><input type="radio" name="gender" value="Nam">Nam</label>
+                <label for="Gender"><input type="radio" name="gender" value="Nu">Nữ</label>
+            </div>
+            <div>
+                <label for="address" class="label1">Địa chỉ</label>
+                <textarea name="address" id="" cols="22" rows="4"></textarea>
+            </div>
+            <div>
+                <label for="class" class="label1">Lớp</label>
+                <select name="lop" id="lop">
+                    <option value="english">Tiếng Anh</option>
+                    <option value="Japanese">Tiếng Nhật</option>
+                    <option value="Mandarin">TiếngTrung</option>
+                </select>
+            </div>
+            <div>
+                <label for="email" class="label1">Email</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="phonenumber" class=label1>Điện thoại</label>
+                <input type="text" name="phonenumber"id="phonenumber">
+            </div>
+            <input type="submit" value="Đăng kí">
+            <input type="reset" value="Nhập lại">
+</fieldset>
+</form>
+        </div>
+    </body>
+</html>

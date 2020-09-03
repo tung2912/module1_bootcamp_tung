@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sở Thích</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 62.5%;
+                background-color:lightblue;
+            }
+            form{
+                width: 600px;
+                margin: 40px auto;
+            }
+            fieldset{
+                background-color: white;
+            }
+            form div{
+                margin: 0px 0px 5px 0px;
+            }
+            legend{
+                color: white;
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                margin: 0px 0px 10px 0px;
+                background-color: orangered;
+            }
+            .label1{
+                color: blue;
+                width: 50px;
+                display: block;
+                float: left;
+                clear: left;
+            }
+            .likes_right {
+                width: 50%;
+            }
+
+            .label2{
+                color:chocolate;
+            }
+
+            .likes {
+                display: flex;
+            }
+            .submit{
+                margin: 0px 0px 0px 50px;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="wrapper"></div>
+        <form id="form" action="">
+            <Fieldset>
+                <legend>SỞ THÍCH CỦA BẠN</legend>
+                <div>
+                    <label for="name" class="label1"> Họ và tên </label>
+                    <input type="text" name="name" id="name"><br><br>
+                </div>
+                <div>
+                    <label for="email" class="label1">Email </label>
+                    <input type="text" name="email" id="email"><br>
+                </div>
+                <div class="likes">
+                    <div><label class="label1">Sở thích </label></div>
+                    
+                    <div class="likes_right">
+                        <label class="label2"for=""><input type="checkbox" name="hobby" id="sport">Thể thao</label>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="music">Âm nhạc</label>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="reading">Đọc sách</label><br>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="websurfing">Lướt web</label>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="playgame">Chơi game</label>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="movie">Điện ảnh</label><br>
+                        <label for="" class="label2"><input type="checkbox" name="hobby" id="travel">Du lịch</label>
+                    </div>
+                   
+                </div>
+                <div class="submit">
+                    <label for=""><input type="submit" value="Gửi thông tin"></label>
+                    <label for=""><input type="reset" value="Nhập lại"></label>
+                </div>  
+            </Fieldset>
+        </form>
+    </div>
+    </body>
+</html>
