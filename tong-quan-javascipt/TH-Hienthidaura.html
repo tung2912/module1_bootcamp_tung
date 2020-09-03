@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button type="button" onclick ="showMessage();">Click me!</button>
+        <Script>
+            function showMessage() {
+                alert('Xin chào!');
+            }
+            function hienthi(){
+                document.getElementById("messageDiv").innerHTML='xin chào bạn!';
+            }
+            function hienthi1(){
+                document.write('Hế lô cưng!');
+            }
+            function hienthi2(){
+                console.log('ahihi!');
+            }
+        </Script>
+        <div id="messageDiv"></div>
+    <button type="button" onclick="hienthi();"> Click me!</button>
+    <button type="button" onclick="hienthi1();">Bấm vô đây nè</button>
+    <button type="button" onclick="hienthi2();">Hit me!</button>
+    </body>
+</html>
