@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo 1 mảng số nguyên và đảo ngược các phần tử trong mảng</title>
+  </head>
+  <body>
+    <input type="text" id="value" />
+    <button type="button" onclick="nhapMang()">Add</button>
+    <button type="button" onclick="sapXep()">Sắp xếp</button>
+    <div id="hienThi"></div>
+    <div id="daoNguoc"></div>
+  </body>
+  <script>
+    let i = 0;
+    let arr = new Array();
+    function nhapMang() {
+      i = +document.getElementById("value").value;
+      arr.push(i)
+      document.getElementById("value").value = "";
+      document.getElementById("hienThi").innerHTML = arr;
+    }
+    function sapXep() {
+      arr.reverse();
+      document.getElementById("daoNguoc").innerHTML = arr;
+    }
+  </script>
+</html>

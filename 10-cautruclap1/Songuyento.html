@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viết chương trình hiển thị 20 số nguyên tố đầu tiên</title>
+  </head>
+  <body>
+    <script>
+      let nums = prompt("nhập vào số lượng mong muốn");
+      let count = 0;
+      let n = 2;
+      let i;
+      function SNT(n) {
+        if (n < 2) {
+          return false;
+        }
+        if (n == 2) {
+          return true;
+        }
+        if (n % 2 == 0) {
+          return false;
+        }
+        for (i = 3; i < n-1; i += 2) {
+          if (n % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      while(count<nums){
+          if(SNT(n)==true){
+              document.write( n +" là số nguyên tố"+"<br>");
+              count++;
+          }
+          n++;
+      }
+    </script>
+  </body>
+</html>

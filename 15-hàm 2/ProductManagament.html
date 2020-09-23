@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+      .search div{
+        width: 500px;
+        background-color: #f1f1f1;
+        padding: 7px 15px;
+        border-radius: 5px;
+      }
+      .search input{
+          padding: 7px 3px;
+          width: 300px;
+      }
+      .btn {
+        background-color: green;
+        color: white;
+        padding: 7px 15px;
+        text-decoration: none;
+        border-radius: 3px;
+        margin: 10px;
+      }
+      .product{
+          width: 600px;
+      }
+      .product table{
+          width: 100%;
+      }
+      .product table,tr,td,th{
+          padding:10px;
+          border-collapse: collapse;
+
+      }
+      .productList tr:nth-child(even){
+        background-color:#f1f1f1;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="search">
+    <h2>Add New Product</h1>
+      <div>
+<table>
+    <tr>
+        <td>
+            <input type="text" id="productName" placeholder="New Product">
+        </td>
+        <td>
+            <a href="#" class="btn" onclick="create()">Add</a>
+        </td>
+    </tr>
+</table>
+      </div>
+    </div>
+    <div class="product">
+        <h2>Display All Product</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody id="productList" class="productList">
+            </tbody>
+        </table>
+    </div>
+  </body>
+  <script src="product.js"></script>
+</html>

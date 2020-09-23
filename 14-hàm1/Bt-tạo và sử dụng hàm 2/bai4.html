@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra 1 kí tự được nhập vào có phải là số hay không</title>
+</head>
+<body>
+
+</body>
+<script>
+    var number=prompt("hãy nhập một kí tự vào");
+    function checkNumber(num){
+        if (!isNaN(num)){
+            return true;
+
+        }else return false;
+    }
+    document.write(checkNumber(number));
+</script>
+</html>

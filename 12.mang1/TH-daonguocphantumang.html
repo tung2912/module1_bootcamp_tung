@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành đảo ngược các phần tử trong mảng</title>
+  </head>
+  <body>
+      <h1 style="text-align: center;">Thực hành đảo ngược các phần tử trong mảng</h1>
+    <script>
+      let x = [-3, 5, 1, 2, 3, 10];
+      let dau = 0;
+      let cuoi = x.length - 1;
+      while (dau < cuoi) {
+        let temp = x[dau];
+        x[dau] = x[cuoi];
+        x[cuoi] = temp;
+        dau++;
+        cuoi--;
+      }
+      document.write(x);
+    </script>
+  </body>
+</html>

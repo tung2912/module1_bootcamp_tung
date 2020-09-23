@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra chòm sao</title>
+</head>
+<body>
+    <script>
+        let star=new Array(
+            "Polaris",
+            "Aldebaran",
+            "Deneb",
+            "Vega",
+            "Altair",
+            "Dubhe",
+            "Regulus"
+        );
+        let constellation= new Array(
+            "Ursa Minor",
+            "Tarurus",
+            "Cygnus",
+            "Lyra",
+            "Aquila",
+            "Ursa Major ",
+            "Leo"
+        );
+        function check(str){
+            let result="";
+            for(let i=0;i<star.length;i++){
+                if(str==star[i]){
+                   result=(`Ngôi sao ${str} mà bạn tìm tương ứng với chòm sao ${constellation[i]}`);
+                   break;
+                } else {
+                    result="Không tim thấy thứ mà bạn cần"
+                }
+            }
+            return result;
+        }
+    let str=prompt("Nhập vào ngôi sao");
+    document.write(check(str));
+    </script>
+</body>
+</html>

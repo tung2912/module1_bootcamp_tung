@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Nhập vào 2 chuỗi và kiểm tra xem thử 2 chuỗi đó có giống nhau không
+    </title>
+  </head>
+  <body>
+    <h1>Nhập vào 2 chuỗi và kiểm tra xem thử 2 chuỗi đó có giống nhau không</h1>
+    <input type="text" id="value" />
+    <button type="button" onclick="nhapChuoi1()">Nhập vào chuỗi 1</button>
+    <button type="button" onclick="nhapChuoi2()">Nhập vào chuỗi 2</button>
+    <button type="button" onclick="kiemTra()">Check</button>
+    <div id="chuoi1"></div>
+    <div id="chuoi2"></div>
+    <div id="soSanh"></div>
+  </body>
+  <script>
+    let A = "";
+    let B = "";
+    function nhapChuoi1() {
+      let a = document.getElementById("value").value;
+      document.getElementById("value").value = "";
+      A = a;
+      document.getElementById("chuoi1").innerHTML = `Chuỗi đầu tiên là: ${A}`;
+    }
+    function nhapChuoi2() {
+      let b = document.getElementById("value").value;
+      document.getElementById("value").value = "";
+      B = b;
+      document.getElementById("chuoi2").innerHTML = `Chuỗi thứ hai là: ${B}`;
+    }
+    function kiemTra() {
+      if (A == B) {
+        document.getElementById(
+          "soSanh"
+        ).innerHTML = `Hai chuỗi ${A} và ${B} là giống nhau`;
+      } else
+        document.getElementById(
+          "soSanh"
+        ).innerHTML = `Hai chuỗi ${A} và ${B} là khác nhau`;
+    }
+  </script>
+</html>

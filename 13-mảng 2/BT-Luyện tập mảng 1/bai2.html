@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên lớn nhất trong mảng</title>
+</head>
+<body>
+    <script>
+        let mang10=new Array(1,3,5,2,9,15,21,4,10,9);
+        let max=mang10[0];
+        index=0;
+        for(i=1;i<mang10.length;i++){
+            if(mang10[i]>max){
+                max=mang10[i];
+                index=i;
+            }
+        }document.write(`Giá trị lớn nhất của mảng này là ${max} và nằm ở vị trí ${index}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ hình chữ nhật</title>
+</head>
+<body>
+    <script>
+let i;
+let j;
+let n=10;
+for(i=1;i<=n;i++){
+    for(j=1;j<=40;j++){
+        if(j==1||j==40){
+            document.write("*");
+        } else if(i==1||i==n){
+            document.write("*");
+        } else document.write("&nbsp&nbsp");
+    }
+    document.write("<br>");
+}
+    </script>
+</body>
+</html>

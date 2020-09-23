@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra 1 số có lớn hơn 0 hay không</title>
+</head>
+<body>
+    <div id="thongBao"></div>
+    <script>
+        var num=prompt("Hãy nhập vào một số bất kì");
+        if(num>0){
+            document.getElementById("thongBao").innerHTML=("số "+num+" là số dương");
+        }
+        else if(num<0){
+            document.getElementById("thongBao").innerHTML=("số "+num+" là số âm");
+        }
+        else document.getElementById("thongBao").innerHTML=("bạn đã nhập vào số 0");
+    </script>
+</body>
+</html>

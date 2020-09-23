@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng dụng mô tả câu chuyện Adam & Eva</title>
+  </head>
+  <body></body>
+  <script>
+    let Apple = function () {
+      this.weight = 10;
+      this.decrease = function () {
+        this.weight--;
+      };
+      this.isEmpty = function () {
+        if (this.weight == 0) {
+          return false;
+        } else return true;
+      };
+      this.getWeight = function () {
+        return this.weight;
+      };
+    };
+    let Human = function (name, gender, weight) {
+      this.name = name;
+      this.gender = gender;
+      this.weight = weight;
+      this.isMale = function () {
+        if (this.gender == Male) {
+          return true;
+        }
+      };
+      this.setApple = function (apple) {
+        this.apple = apple;
+      };
+      this.checkApple = function () {
+        return this.apple.isEmpty();
+      };
+      this.eatApple = function () {
+        this.apple.weight--;
+        this.weight++;
+      };
+      this.say = function () {
+        console.log(`Xin chào, tên tôi là ${this.name}`);
+      };
+      this.getName = function () {
+        return this.name;
+      };
+      this.setName = function (name) {
+        this.name = name;
+      };
+      this.getWeightHuman = function () {
+        return this.weight;
+      };
+      this.setWeightHuman = function (weight) {
+        this.weight = weight;
+      };
+    };
+    let apple1 = new Apple();
+    let adam = new Human("Adam", "Male", 70);
+    let eva = new Human("Eva", "Female", 50);
+    adam.setApple(apple1);
+    eva.setApple(apple1);
+  </script>
+</html>

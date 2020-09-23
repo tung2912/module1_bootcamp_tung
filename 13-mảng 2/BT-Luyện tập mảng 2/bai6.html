@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Nhập vào 1 mảng kí tự, thay các kí tự "-" có trong mảng thành kí tự "_"
+    </title>
+  </head>
+  <body>
+    <h1>
+      Nhập vào 1 mảng kí tự, thay các kí tự "-" có trong mảng thành kí tự "_"
+    </h1>
+    <input type="text" id="giaTri" />
+    <button type="button" onclick="nhapMang()">Nhập giá trị</button>
+    <button type="button" onclick="kiemTra()">Kiểm tra</button>
+    <div id="hienThiMang"></div>
+    <div id="mangSua"></div>
+  </body>
+  <script>
+    let mangKiTu = new Array();
+    function nhapMang() {
+      let kiTu = document.getElementById("giaTri").value;
+      document.getElementById("giaTri").value = "";
+      mangKiTu.push(kiTu);
+      document.getElementById(
+        "hienThiMang"
+      ).innerHTML = `Mảng bạn đã nhập vào: ${mangKiTu}`;
+    }
+    function kiemTra() {
+      for (let i = 0; i < mangKiTu.length; i++) {
+        if (mangKiTu[i] == "-") {
+          mangKiTu[i] = "_";
+          document.getElementById(
+            "mangSua"
+          ).innerHTML = `Mảng sau khi được sửa: ${mangKiTu}`;
+        }
+      }
+    }
+  </script>
+</html>

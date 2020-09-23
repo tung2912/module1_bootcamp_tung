@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <input type="text" id="doC" placeholder="nhập vào độ C">
+    <div id="reSult"></div>
+    <button onclick="doiNhietDo()">convert</button>
+</body>
+<script>
+    function doiNhietDo(){
+        let doC=document.getElementById("doC").value;
+        document.getElementById("reSult").innerHTML="Độ F là: " + (doC*9/5+32);
+    }
+</script>
+</html>

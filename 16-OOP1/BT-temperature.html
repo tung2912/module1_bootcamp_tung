@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bt-Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+    <script>
+        let Temparature=function(temp){
+            this.temp=temp;
+            this.changeCtoF=function(){
+                return 1.5*temp+32;
+            }
+            this.changeCtoK=function(){
+                return temp+273.15;
+            }
+        }
+        let temp1=new Temparature(25);
+        let f=temp1.changeCtoF();
+        let k=temp1.changeCtoK();
+        document.write(`Độ C là ${temp1.temp}, tương ứng với:<br> Độ F là ${f}<br> Độ K là ${k}`);
+    </script>
+</body>
+</html>

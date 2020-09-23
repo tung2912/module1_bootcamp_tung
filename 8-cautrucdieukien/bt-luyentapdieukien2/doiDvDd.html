@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi từ mét sang feet</title>
+</head>
+<body>
+    <div id="reSult"></div>
+    <input type="text" id="chieuDai" placeholder="Nhập vào số mét:">
+    <button type="button" onclick="doiChieuDai()">Đổi</button>
+</body>
+
+<script>
+    function doiChieuDai(){
+        let chieuDaim=document.getElementById("chieuDai").value;
+        document.getElementById("reSult").innerHTML="Chiều dài mà bạn đã đổi được là "+chieuDaim*3.2808+" feet";
+    }
+</script>
+</html>

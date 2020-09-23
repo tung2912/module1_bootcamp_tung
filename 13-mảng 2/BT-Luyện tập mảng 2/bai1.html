@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khởi tạo mảng 2 chiều, sau đó in ra các phần tử trong mảng</title>
+</head>
+<body>
+    <h1>Tạo mảng 2 chiều và in ra các phần tử trong mảng</h1>
+</body>
+<script>
+    let A=[
+        [1,2,1,24],
+        [8,11,9,4],
+        [7,0,7,27],
+        [7,4,28,14],
+        [3,10,26,7]
+    ];
+    for(let i=0;i< A.length; i++){
+        document.write(`Row ${i}:`);
+        for(let j=0;j<A[i].length;j++){
+            document.write(`${A[i][j]} `); 
+        } document.write("<br/>");
+    }
+</script>
+</html>

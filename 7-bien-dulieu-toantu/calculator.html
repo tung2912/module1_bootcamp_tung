@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Ứng dụng máy tính</title>
+
+    </head>
+    <body>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button type="button" onclick="sum()">Addition(+)</button>
+        <button type="button" onclick="sub()">Subtraction(-)</button>
+        <button type="button" onclick="multi()">Multiplication(X)</button>
+        <button type="button" onclick="divide()">Division(/)</button>
+        <label id="result">Kết quả là: </label>
+    </body>
+    <script>
+
+        function sum(){
+            let num1=document.getElementById("num1").value;
+            let so1=parseInt(num1);
+            let num2=document.getElementById("num2").value;
+            let so2=parseInt(num2);
+           document.getElementById("result").innerHTML=(so1+so2);
+        }
+        function sub(){
+            let num1=document.getElementById("num1").value;
+            let so1=parseInt(num1);
+            let num2=document.getElementById("num2").value;
+            let so2=parseInt(num2);
+           document.getElementById("result").innerHTML=(so1-so2);
+        }
+        function multi(){
+            let num1=document.getElementById("num1").value;
+            let so1=parseInt(num1);
+            let num2=document.getElementById("num2").value;
+            let so2=parseInt(num2);
+           document.getElementById("result").innerHTML=(so1*so2);
+        }
+        function divide(){
+            let num1=document.getElementById("num1").value;
+            let so1=parseInt(num1);
+            let num2=document.getElementById("num2").value;
+            let so2=parseInt(num2);
+           document.getElementById("result").innerHTML=(so1/so2);
+        }
+    </script>
+</html>

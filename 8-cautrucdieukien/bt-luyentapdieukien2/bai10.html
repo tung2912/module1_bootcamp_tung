@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viết chương trình tính giá điện</title>
+  </head>
+  <body>
+    <h1>Viết chương trình tính giá điện</h1>
+    <input
+      type="text"
+      id="soDienSuDung"
+      placeholder="Nhập vào số Kwh điện sử dụng"
+    />
+    <button type="button" onclick="tinhGiaDien()">Tính giá điện</button>
+    <div id="gia"></div>
+  </body>
+  <script>
+    function tinhGiaDien() {
+      let soDien = parseInt(soDienSuDung.value);
+      let giaDien;
+      if (soDien < 500) {
+        giaDien = 2000;
+        document.getElementById("gia").innerHTML =
+          "Giá điện là: " + giaDien + "/Kwh";
+      } else if (soDien < 700) {
+        giaDien = 3000;
+        document.getElementById("gia").innerHTML =
+          "Giá điện là: " + giaDien + "/Kwh";
+      } else {
+        giaDien = 4000;
+        document.getElementById("gia").innerHTML =
+          "Giá điện là: " + giaDien + "/Kwh";
+      }
+    }
+  </script>
+</html>

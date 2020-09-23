@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra một số nhập vào có phải số dương hay không</title>
+</head>
+<body>
+    <script>
+        // let num=parseFloat(prompt("hãy nhập vào một số"));
+        // function checkPositiveNumber(a){
+        //         if(a>0){
+        //             return true;
+        //         } else return false;
+        // }
+        // document.write(checkPositiveNumber(num));
+        function checkNumber(){
+            let num;
+            do{
+                num=+prompt("nhập vào giá trị: ");
+            } while(!Number.isInteger(num))
+            return num;
+        }
+        function checkPositive(number){
+            if (number>0){
+                return true;
+            } else return false;
+        }
+document.write(checkPositive(checkNumber()));
+    </script>
+</body>
+</html>

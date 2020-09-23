@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển 1 chuỗi kí tự vừa nhập từ chữ thường sang chữ hoa</title>
+</head>
+<body>
+    <script>
+        let chuoi="The Quick Brown Fox";
+        let UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let LOWER="abcdefghijklmnopqrstuvwxyz";
+        let ketQua=[];
+        for (let i=0;i<chuoi.length;i++){
+            if(UPPER.indexOf(chuoi[i])!==-1){
+                ketQua.push(chuoi[i].toLowerCase());
+            } else if(LOWER.indexOf(chuoi[i])!==-1){
+                ketQua.push(chuoi[i].toUpperCase());
+            } else ketQua.push(chuoi[i]);
+        }
+        ketQua=ketQua.join("");
+        document.write(ketQua);
+    </script>
+</body>
+</html>

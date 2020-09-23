@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra 1 số và xóa nếu nó tồn tại trong mảng đã cho</title>
+  </head>
+  <body>
+    <input type="text" id="enterValue" />
+    <button type="button" onclick="themVaoMang()">Add</button>
+    <input type="text" id="soV" />
+    <button type="button" onclick="kiemTra()">Xóa</button>
+    <div id="mangAValue"></div>
+    <div id="check"></div>
+  </body>
+  <script>
+    let A = new Array();
+    function themVaoMang() {
+      let a = document.getElementById("enterValue").value;
+      A.push(a);
+      document.getElementById("enterValue").value = "";
+      document.getElementById("mangAValue").innerHTML = `Mảng A: ${A}`;
+    }
+    function kiemTra() {
+      let v = document.getElementById("soV").value;
+      for (i = 0; i < A.length; i++) {
+        if (A[i] == v) {
+          A.splice(i, 1);
+          i--;
+          document.getElementById(
+            "check"
+          ).innerHTML = `Mảng A bị xóa phần tử ${v} và hiện giờ còn lại ${A}`;
+        }
+      }
+    }
+  </script>
+</html>

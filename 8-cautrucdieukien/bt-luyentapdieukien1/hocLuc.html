@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp loại học lực của học sinh</title>
+</head>
+<body>
+    <div id="thongBao"></div>
+    <script>
+        var KT=+prompt("nhập vào điểm kiểm tra của bạn");
+        var GK=+prompt("nhập vào điểm thi giữa kì của bạn");
+        var CK=+prompt("nhập vào điểm thi cuối kì của bạn");
+        var DTB=(KT+GK+CK)/3;
+        if(DTB>=8){
+            document.getElementById("thongBao").innerHTML=("Bạn là học sinh Giỏi");
+        } else if(DTB>=7){
+            document.getElementById("thongBao").innerHTML=("Bạn là học sinh Khá");
+        } else if(DTB>=5){
+            document.getElementById("thongBao").innerHTML=("Bạn là học sinh Trung bình");
+        } else document.getElementById("thongBao").innerHTML=("Bạn là học sinh yếu");
+    </script>
+</body>
+</html>

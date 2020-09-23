@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giải phương trình bậc 2</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Giải phương trình ax^2+bx+c=0(a khác 0)</h1>
+    <form action="">
+      <input type="text" name="" id="soa" placeholder="Nhập vào số a" />
+      <input type="text" name="" id="sob" placeholder="Nhập vào số b" />
+      <input type="text" name="" id="soc" placeholder="Nhập vào số c" />
+      <button type="button" onclick="giaiPtBac2()">Giải Pt</button>
+    </form>
+    <div id="ketQua"></div>
+  </body>
+  <script>
+    function giaiPtBac2() {
+      let x, x1, x2;
+      let a, b, c;
+      a = parseInt(soa.value);
+      b = parseInt(sob.value);
+      c = parseInt(soc.value);
+      let delTa = b ** 2 - 4 * a * c;
+      if (delTa < 0) {
+        document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm";
+      } else if (delTa == 0) {
+        x = (-b / 2) * a;
+        document.getElementById("ketQua").innerHTML =
+          "Phương trình có 2 nghiệm là x1=x2= " + x;
+      } else {
+        x1 = ((-b + delTa ** 0.5) / 2) * a;
+        x2 = ((-b - delTa ** 0.5) / 2) * a;
+        document.getElementById("ketQua").innerHTML =
+          "Phương trình có 2 nghiệm là x1=" + x1 + " và x2= " + x2;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm tính chu vi và diện tích của hình tròn</title>
+</head>
+<body>
+    <script>
+        function findArea(r){
+            let area=3.14*r**2;
+            return area;
+        }
+        function findPerimeter(r){
+            let perimeter=2*3.14*r;
+            return perimeter;
+        }
+        let r=prompt("Nhập vào r: ");
+        document.write(`Diện tích của hình tròn có r = ${r} là ${findArea(r)} <br/>`);
+        document.write(`Chu vi của hình tròn có r = ${r} là ${findPerimeter(r)}`);
+    </script>
+</body>
+</html>

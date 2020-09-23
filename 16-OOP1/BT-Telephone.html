@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xây dựng lớp mô tả điện thoại</title>
+  </head>
+  <body>
+<div>
+  <div>
+    <button type="button" onclick="active()">Bật tắt điện thoại</button>
+  </div>
+  <h2>Nokia</h2>
+  <input type="text" id="composeNokia">
+  <button type="button" onclick="guiTNnokia()">Gửi tin nhắn cho IP</button>
+  <input type="text" id="inboxNokia">
+  <button type="button" onclick="readIb1()">Đọc inbox</button>
+</div>
+<div>
+  <h2>Iphone</h2>
+  <input type="text" id="composeIphone">
+  <button type="button" onclick="guiTnIphone()">Gửi tin nhắn cho Nokia</button>
+  <input type="text" id="inboxIphone">
+  <button type="button" onclick="readIb2()">Đọc inbox</button>
+</div>
+  </body>
+  <script>
+    function active(){
+    nokia.sWitch();
+    iphone.sWitch();
+    } 
+    function guiTNnokia(){
+      let messNo=document.getElementById("composeNokia").value;
+      nokia.comPose(messNo);  
+      document.getElementById("composeNokia").value="";
+      nokia.sentMess(iphone);   
+    }
+
+    function guiTnIphone(){
+      let messIp=document.getElementById("composeIphone").value;
+      iphone.comPose(messIp);
+      document.getElementById("composeIphone").value="";
+      iphone.sentMess(nokia);
+    }
+    function readIb1(){
+      document.getElementById("inboxNokia").value=nokia.readInbox();
+    }
+    function readIb2(){
+      document.getElementById("inboxIphone").value=iphone.readInbox();
+    }
+
+    let Mobile = function (battery) {
+      this.battery = battery;
+      this.composeMess = [];
+      this.inbox = [];
+      this.sent = [];
+      this.status = false;
+      this.checkStatus = function () {
+        if (this.status) {
+          return `Máy đã bật`;
+        } else return `Máy chưa bật`;
+      };
+      this.sWitch = function () {
+        if (this.status) {
+          this.status = false;
+        } else {
+          this.status = true;
+        }
+        return this.checkStatus();
+        this.battery--;
+      };
+      this.chargeBatt = function () {
+        if (this.battery < 100) {
+          this.battery = 100;
+        }
+      };
+      this.comPose = function (mess) {
+        if (this.status) {
+          this.battery--;
+          this.composeMess.push(mess);
+        }
+      };
+      this.sentMess = function (receiver) {
+        if (this.status) {
+          this.battery--;
+          receiver.inbox.push(this.composeMess);
+          this.composeMess = [];
+          this.sent.push(this.composeMess);
+        }
+      };
+      this.readInbox = function () {
+        if (this.status) {
+          this.battery--;
+          return this.inbox;
+        }
+      };
+      this.readSent = function () {
+        if (this.status) {
+          this.battery--;
+          return this.sent;
+        }
+      };
+    };
+    let nokia = new Mobile(50);
+    let iphone = new Mobile(60);
+
+  </script>
+</html>

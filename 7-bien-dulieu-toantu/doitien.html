@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            Đổi tiền
+        </title>
+    </head>
+    <body>
+        <label>Amount</label>
+        <input type="number" id="soluong">
+        <label>From Currency</label>
+        <select id="tien1">
+            <option value="VND">Vietnam</option>
+            <option value="USD">America</option>
+        </select>
+        <select id="tien2">
+            <option value="USD">America</option>
+            <option value="VND">Vietnam</option>
+        </select>
+        <button type="button" onclick="changeMoney()">Convert</button>
+        <div id="ketqua"></div>
+        <script>
+            function changeMoney(){
+                let soluong=document.getElementById("soluong").value;
+                document.getElementById("ketqua").innerHTML(soluong/23000);
+            }
+        </script>
+
+        
+    </body>
+</html>

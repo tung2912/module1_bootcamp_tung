@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo hàm kiểm tra từ đối xứng</title>
+  </head>
+  <body>
+    <h1>Nhập vào 1 từ và kiểm tra xem từ đó có đối xứng hay không</h1>
+  </body>
+  <script>
+    let chuoi = prompt("Nhập vào 1 chuỗi bất kì");
+    function checkDoiXung(str) {
+      for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] == str[str.length - i - 1]) {
+          return true;
+        }
+        return false;
+      }
+    }
+    document.write(checkDoiXung(chuoi));
+  </script>
+</html>

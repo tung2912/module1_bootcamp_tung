@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user=prompt('Ai đó');
+        if(user=="admin"){
+            let pass=prompt("password?");
+            if (pass=="TheMaster"){
+                alert("welcome!");
+            }else if(pass==null){
+                alert("cancel.");
+            }else {
+                alert("wrong password");
+            }
+        } else if(user==null){
+            alert("cancel.");
+        } else {
+            alert("i don't know you");
+        }
+    </script>
+</body>
+</html>

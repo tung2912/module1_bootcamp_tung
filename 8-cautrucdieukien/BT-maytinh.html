@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập máy tính đơn giản</title>
+    <style>
+        table{
+            background-color: white;
+            border: black;
+            margin: auto;
+            border: 3px solid;
+            border-radius: 5px;
+        }
+        .btn{
+            color: blue;
+            background-color: white;
+            width: 35px;
+            height: 30px;
+        }
+        #display{
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <form name="mayTinh">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="so" name="display"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="1" id="mot" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="2" id="hai" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="3" id="ba" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="+" id="cong" onclick="mayTinh.display.value+=this.value"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="4" id="bon" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="5" id="nam" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="6" id="sau" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="-" id="tru" onclick="mayTinh.display.value+=this.value"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="button" value="7" id="bay" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="8" id="tam" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="9" id="chin" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="*" id="nhan" onclick="mayTinh.display.value+=this.value"></td>
+            </tr>
+            <tr>
+                <td><input class="btn" type="reset" value="C"></td>
+                <td><input class="btn" type="button" value="0" id="khong" onclick="mayTinh.display.value+=this.value"></td>
+                <td><input class="btn" type="button" value="=" id="bang" onclick="mayTinh.display.value=eval(mayTinh.display.value)"></td>
+                <td><input class="btn" type="button" value="/" id="chia" onclick="mayTinh.display.value+=this.value"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+<script>
+function tinhKetQua(){
+
+
+}
+</script>
+</html>

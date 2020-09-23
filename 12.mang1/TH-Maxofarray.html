@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm giá trị lớn nhất của mảng</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Tìm giá trị lớn nhất của mảng</h1>
+  </body>
+  <script>
+    let mang1 = [-3, 2, 1, 5, 10, 20, 13];
+    let max = 0;
+    let index = 0;
+    for (let i = 1; i < mang1.length; i++) {
+      if (mang1[i] > max) {
+        max = mang1[i];
+        index = i;
+      }
+    }
+    document.write(`Giá trị lớn nhất của mảng là ${max} tại vị trí ${index}`);
+  </script>
+</html>

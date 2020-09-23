@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Đếm số nguyên âm trong 1 mảng các số được nhập vào</h1>
+    <input type="text" id="nhapSo">
+    <button type="button" onclick="nhapMang()">Add</button>
+    <button type="button" onclick="demSoAm()">Đếm số âm</button>
+    <div id="hienThi"></div>
+    <div id="soAm"></div>
+    <script>
+        let i=0;
+        let mangMoi=new Array();
+        function nhapMang(){
+            i=+document.getElementById("nhapSo").value;
+            mangMoi.push(i);
+            document.getElementById("nhapSo").value="";
+            document.getElementById("hienThi").innerHTML=mangMoi;
+        }
+        function demSoAm(){
+            countAm=0;
+            for(i=0;i<mangMoi.length;i++){
+                if(mangMoi[i]<0){
+                    countAm+=1;
+                }
+            } document.getElementById("soAm").innerHTML=countAm;
+        }
+    </script>
+</body>
+</html>

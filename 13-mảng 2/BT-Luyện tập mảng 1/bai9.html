@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nối mảng a và b vào mảng c</title>
+</head>
+<body>
+    <h1>Nhập hai mảng A và B, sau đó nối vào mảng C</h1>
+    <input type="text" id="nhapSo">
+    <button type="button" onclick="nhapA()">Nhập các giá trị của mảng A</button>
+    <button type="button" onclick="nhapB()">Nhập các giá trị của mảng B</button>
+    <button type="button" onclick="ghepMang()">Ghép mảng</button>
+    <div id="mangA"></div>
+    <div id="mangB"></div>
+    <div id="mangC"></div>
+    <script>
+        let A=new Array();
+        let B=new Array();
+        let C=new Array(1,2,5,10);
+        function nhapA(){
+            let a=+document.getElementById("nhapSo").value;
+            A.push(a);
+            document.getElementById("nhapSo").value="";
+            document.getElementById("mangA").innerHTML=`Mảng A: ${A}`;
+        }
+        function nhapB(){
+            let b=+document.getElementById("nhapSo").value;
+            B.push(b);
+            document.getElementById("nhapSo").value="";
+            document.getElementById("mangB").innerHTML=`Mảng B: ${B}`;
+        }
+        function ghepMang(){
+            C=C.concat(A.concat(B));
+            document.getElementById("mangC").innerHTML=`Mảng C: ${C}`;
+        }
+    </script>
+</body>
+</html>

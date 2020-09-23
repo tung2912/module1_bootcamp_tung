@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Kiểm tra xem thử số nhập vào có phải là tuổi của một người hay không
+    </title>
+  </head>
+  <body>
+    <input type="text" name="" id="tuoi" placeholder="Nhập vào một số bất kì" />
+    <button type="button" onclick="kiemTra()">Check</button>
+    <div id="thongBao"></div>
+  </body>
+  <script>
+    function kiemTra() {
+      let soTuoi = parseInt(tuoi.value);
+      if (soTuoi>0 && soTuoi< 120) {
+        document.getElementById("thongBao").innerHTML =
+          "Số mà bạn nhập vào là tuổi của một người";
+      } else
+        document.getElementById("thongBao").innerHTML =
+          "Số mà bạn nhập vào không phải là tuổi của một người";
+    }
+  </script>
+</html>

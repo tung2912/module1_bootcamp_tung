@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BT-Xây dựng lớp mô tả hình chữ nhật</title>
+  </head>
+  <body>
+    <canvas
+      id="myNewCanvas"
+      width="400"
+      height="300"
+      style="border: 1px solid #d3d3d3"
+    ></canvas>
+    <div id="displayPerimeter"></div>
+    <div id="displayArea"></div>
+    <script>
+      let Rectangle = function (dai, rong) {
+        this.dai = dai;
+        this.rong = rong;
+        this.findPerimeter = function () {
+          return (dai + rong) * 2;
+        };
+        this.findArea = function () {
+          return dai * rong;
+        };
+      };
+      //   let rectangle1 = new Rectangle(20, 30);
+
+      function createRectangle() {
+        let ctx = document.getElementById("myNewCanvas").getContext("2d");
+        let rectangle1 = new Rectangle(300, 100);
+        ctx.fillStyle = "#ff0000";
+        ctx.fillRect(50, 100, rectangle1.dai, rectangle1.rong);
+        let perimeter = rectangle1.findPerimeter();
+        let area = rectangle1.findArea();
+        document.getElementById("displayPerimeter").innerHTML=`Chu vi: ${perimeter} `;
+        document.getElementById("displayArea").innerHTML=`Diện tích: ${area}`;
+      }
+      createRectangle();
+    </script>
+  </body>
+</html>

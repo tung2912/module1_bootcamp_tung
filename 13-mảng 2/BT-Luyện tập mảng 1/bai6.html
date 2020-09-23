@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm xem 1 số nhập vào có thuộc mảng hay không</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Tìm xem 1 số nhập vào có thuộc mảng đã cho trước hay không</h1>
+   <input type="text" id="soV">
+   <button type="button" onclick="kiemTra()">Kiểm Tra</button> 
+   <div id="reSult"></div>
+</body>
+<script>
+    let mang=new Array(1,2,5,6,11,9,10,8,20,15);
+    function kiemTra(){
+        let v=+document.getElementById("soV").value;
+        for(i=0;i<mang.length;i++){
+            if(mang[i]==v){
+                document.getElementById("reSult").innerHTML=`${v} is in the array`;
+                break;
+            } else document.getElementById("reSult").innerHTML=`${v} is not in the array`;
+        }
+    }
+</script>
+</html>

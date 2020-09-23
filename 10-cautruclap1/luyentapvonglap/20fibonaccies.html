@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình in ra 20 số fibonacci dầu tiên</title>
+</head>
+<body>
+    <h2 style="text-align: center; color: blue;">Hiển thị 20 số fibonacci đầu tiên</h2>
+    <script>
+        let nums=0;
+        let so1=0;
+        let so2=1;
+        let so3;
+        document.write(so1+"<br>");
+        document.write(so2+"<br>");
+        while(nums<18){
+            so3=so1+so2;
+            so1=so2;
+            so2=so3;
+            document.write(so3+"<br>");
+            nums++;
+        }
+    </script>
+</body>
+</html>

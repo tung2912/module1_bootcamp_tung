@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính hoa hồng bán hàng</title>
+</head>
+<body>
+    <div id="thongBao"></div>
+</body>
+<script>
+    var doanhSo=+prompt("Hãy nhập vào doanh số bán hàng theo đơn vị tính triệu VNĐ");
+    var hoaHong;
+    if(doanhSo<50){
+        hoaHong=doanhSo*5/100;
+        document.getElementById("thongBao").innerHTML=("Bạn nhận được số tiền hoa hồng là: "+hoaHong+" triệu VNĐ");
+    } else if(doanhSo<=100){
+        hoaHong=doanhSo*10/100;
+        document.getElementById("thongBao").innerHTML=("Bạn nhận được số tiền hoa hồng là: "+hoaHong+" triệu VNĐ");
+    } else {
+        hoaHong=doanhSo*15/100;
+        document.getElementById("thongBao").innerHTML=("Bạn nhận được số tiền hoa hồng là: "+hoaHong+" triệu VNĐ");
+    }
+</script>
+</html>

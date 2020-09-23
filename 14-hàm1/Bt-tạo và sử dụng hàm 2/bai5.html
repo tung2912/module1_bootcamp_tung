@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm tìm Min của 3 số nhập vào</title>
+</head>
+<body>
+    <script>
+        let numa=parseFloat(prompt("nhập vào số a"));
+        let numb=parseFloat(prompt("nhập vào số b"));
+        let numc=parseFloat(prompt("nhập vào số c"));
+        function findMinOf3(a,b,c){
+            let min=a;
+            if (min<b){
+                if(min<c){
+                    min=a;
+                }
+            } else if(b<c){
+                min=b;
+            } else min=c;
+            return min;
+        }
+        document.write(`Số nhỏ nhất trong 3 số ${numa}, ${numb}, ${numc} là: ${findMinOf3(numa,numb,numc)}`);
+    </script>
+</body>
+</html>

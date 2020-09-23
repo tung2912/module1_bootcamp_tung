@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giải phương trình bậc nhất</title>
+    <style>
+      h1 {
+        color: blue;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Giải Phương Trình ax+b=0</h1>
+    <form action="">
+      <input type="text" id="soa" placeholder="Nhập vào số a" />
+      <input type="text" id="sob" placeholder="Nhập vào số b" />
+      <button type="button" onclick="giaiPtBac1()">Giải PT</button>
+    </form>
+    <div id="reSult"></div>
+  </body>
+  <script>
+    function giaiPtBac1() {
+      let x;
+      let a, b;
+      a = parseInt(soa.value);
+      b = parseInt(sob.value);
+      if (a == 0) {
+        if (b == 0) {
+          document.getElementById("reSult").innerHTML =
+            "Phương trình có vô số nghiệm";
+        } else
+          document.getElementById("reSult").innerHTML =
+            "Phương trình vô nghiệm";
+      } else {
+        x = -a / b;
+        document.getElementById("reSult").innerHTML =
+          "Phương trình có một nghiệm = " + x;
+      }
+    }
+  </script>
+</html>

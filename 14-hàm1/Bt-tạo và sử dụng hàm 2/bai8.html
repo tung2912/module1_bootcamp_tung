@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm truyền vào mảng số nguyên và đảo ngược mảng</title>
+</head>
+<body>
+    <script>
+        let size=parseFloat(prompt("nhập vào số phần tử của mảng"));
+        let array=new Array();
+        function inputArray(size){
+            for(i=0;i<size;i++){
+                array[i]=Math.floor(Math.random()*100 + 1);
+            } return array.reverse();
+        }
+        document.write(`Mảng của bạn đã nhập sau khi đảo chiều là ${inputArray(size)}`);
+    </script>
+</body>
+</html>

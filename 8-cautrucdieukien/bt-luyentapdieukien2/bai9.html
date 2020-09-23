@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra 3 số nhập vào có phải là cạnh của tam giác hay không</title>
+  </head>
+  <body>
+    <h1>Kiểm tra ba số a,b,c nhập vào có phải là cạnh của tam giác không</h1>
+    <input type="text" name="" id="soa" placeholder="Nhập vào số a" />
+    <input type="text" name="" id="sob" placeholder="Nhập vào số b" />
+    <input type="text" name="" id="soc" placeholder="Nhập vào số c" />
+    <button type="button" onclick="kiemTra()">Check</button>
+    <div id="thongBao"></div>
+  </body>
+  <script>
+    function kiemTra() {
+      let a, b, c;
+      a = parseInt(soa.value);
+      b = parseInt(sob.value);
+      c = parseInt(soc.value);
+      if ((a, b, c > 0 && a + b > c && b + c > a && a + c > b)) {
+        document.getElementById("thongBao").innerHTML =
+          "a,b,c là ba cạnh của một tam giác";
+      } else
+        document.getElementById("thongBao").innerHTML =
+          "a,b,c không phải là ba cạnh của một tam giác";
+    }
+  </script>
+</html>

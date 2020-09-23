@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm max của 3 số</title>
+</head>
+<body>
+    <div id="reSult"></div>
+   <script>
+       var a=prompt("Nhập vào số a");
+       var b=prompt("Nhập vào số b");
+       var c=prompt("Nhập vào số c");
+       if(a>b){
+           if(a>c){
+               document.getElementById("reSult").innerHTML=(a+" là số lớn nhất trong 3 số");
+           }
+           else if(b>c){
+               document.getElementById("reSult").innerHTML=(b+" là số lớn nhất trong 3 số");
+           }
+       } else document.getElementById("reSult").innerHTML=(c+" là số lớn nhất trong 3 số");
+   </script> 
+</body>
+</html>

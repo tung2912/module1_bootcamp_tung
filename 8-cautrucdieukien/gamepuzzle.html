@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game puzzle</title>
+    <style>
+        img{
+            width: 400px;
+            height: 80px;
+            display: block;
+            margin: auto;
+            margin-bottom: 5px;
+            border:1px solid;
+            box-shadow: black 1px 2px 3px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/puzzle/panda_swap_part1x1.jpg" id="hinh1" onclick="doiHinh1()">
+    <img src="images/puzzle/panda_swap_part2x1.jpg" id="hinh2" onclick="doiHinh2()">
+    <img src="images/puzzle/panda_swap_part3x1.jpg" id="hinh3" onclick="doiHinh3()">
+    <img src="images/puzzle/panda_swap_part4x1.jpg" id="hinh4" onclick="doiHinh4()">
+    <img src="images/puzzle/panda_swap_part5x1.jpg" id="hinh5" onclick="doiHinh5()">
+    
+</body>
+<script>
+    let index1=1;
+    function doiHinh1(){
+        let imgs1=["images/puzzle/panda_swap_part1x1.jpg","images/puzzle/funny-cat1_part1x1.jpg","images/puzzle/monkey_part1x1.jpg"];
+        document.getElementById("hinh1").src=imgs1[index1];
+        index1++;
+        if(index1==3){
+            index1=0
+        }
+    }
+    let index2=1;
+    function doiHinh2(){
+        let imgs2=["images/puzzle/panda_swap_part2x1.jpg","images/puzzle/funny-cat1_part2x1.jpg","images/puzzle/monkey_part2x1.jpg"];
+        document.getElementById("hinh2").src=imgs2[index2];
+        index2++;
+        if(index2==3){
+            index2=0
+        }
+    }
+    let index3=1;
+    function doiHinh3(){
+        let imgs3=["images/puzzle/panda_swap_part3x1.jpg","images/puzzle/funny-cat1_part3x1.jpg","images/puzzle/monkey_part3x1.jpg"];
+        document.getElementById("hinh3").src=imgs3[index3];
+        index3++;
+        if(index3==3){
+            index3=0
+        }     
+    }
+    let index4=1;
+    function doiHinh4(){
+        let imgs4=["images/puzzle/panda_swap_part4x1.jpg","images/puzzle/funny-cat1_part4x1.jpg","images/puzzle/monkey_part4x1.jpg"];
+        document.getElementById("hinh4").src=imgs4[index4];
+        index4++;
+        if(index4==3){
+            index4=0
+        }
+    }
+    let index5=1;
+    function doiHinh5(){
+        let imgs5=["images/puzzle/panda_swap_part5x1.jpg","images/puzzle/funny-cat1_part5x1.jpg","images/puzzle/monkey_part5x1.jpg"];
+        document.getElementById("hinh5").src=imgs5[index5];
+        index5++;
+        if(index5==3){
+            index5=0
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+    <div id="thongBao"></div>
+    <script>
+        var soPhut=+prompt("Số phút đã gọi trong tháng:");
+        var giaCuoc1Phut=2000;
+        var tongCuoc=giaCuoc1Phut*soPhut;
+        if (soPhut>150){
+            
+            document.getElementById("thongBao").innerHTML=("Tổng cước trong tháng của bạn là: "+tongCuoc*1.5+" VNĐ");
+        } else if(soPhut>100){
+            
+            document.getElementById("thongBao").innerHTML=("Tổng cước trong tháng của bạn là: "+tongCuoc*1.25 +" VNĐ");
+        } else {
+            tongCuoc=tongCuoc*1;
+            document.getElementById("thongBao").innerHTML=("Tổng cước trong tháng của bạn là: "+tongCuoc+" VNĐ");
+        }
+    </script>
+</body>
+</html>

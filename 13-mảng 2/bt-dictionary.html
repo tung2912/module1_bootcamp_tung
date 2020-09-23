@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng dụng từ điển đơn giản</title>
+  </head>
+  <body>
+      <h1>Ứng dụng từ điển đơn giản</h1>
+    <input type="text" name="" id="search" />
+    <button onclick="dich()">Search</button>
+    <div id="result"></div>
+  </body>
+  <script>
+    function dich() {
+      let eArr = ["dog", "cat", "tree"];
+      let vArr = ["chó", "mèo", "cây"];
+      let value = document.getElementById("search").value;
+      for (i = 0; i < eArr.length; i++) {
+        if (eArr[i] == value) {
+          value = vArr[i];
+          document.getElementById("result").innerHTML =`${eArr[i]} là ${value}`;
+          break;
+        } else document.getElementById("result").innerHTML="Không tìm thấy kết quả";
+      }
+    }
+  </script>
+</html>

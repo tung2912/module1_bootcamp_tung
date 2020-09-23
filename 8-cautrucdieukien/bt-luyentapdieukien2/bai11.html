@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chương trình tính thuế thu nhập cá nhân</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: black 1px solid;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Viết chương trình tính thuế thu nhập cá nhân phải nộp</h1>
+    <h2>Công thức tính thuế thu nhập cá nhân phải nộp:</h2>
+    <h3>Thuế thu nhập cá nhân phải nộp = Thu nhập tính thuế x Thuế suất</h3>
+    <p>Mức giảm trừ bản thân:11 triệu/tháng</p>
+    <p>Mức giảm trừ người phụ thuộc:4,6 triệu/tháng</p>
+    <table>
+      <tr>
+        <th>Số người phụ thuộc</th>
+        <th>Thu nhập chịu thuế</th>       
+        <th>Thu nhập tính thuế</th>
+        <th>Thuế phải nộp</th>
+      </tr>
+      <tr>
+        <td><input type="text" id="phuThuoc" /></td>
+        <td><input type="text" id="thuNhapChiuThue" /></td>
+        <td><input type="text" id="thuNhapTinhThue" /></td>
+        <td><input type="text" id="thuePhaiNop" /></td>
+      </tr>
+    </table>
+    <button type="button" onclick="TinhThueThuNhap()">Tính thuế</button>
+  </body>
+  <script>
+    function TinhThueThuNhap(){
+      let pThuoc,tNCThue,tNTThue,tPNop;
+      let pThuoc=parseInt(phuThuoc.value);
+      let tNCThue= parseInt(thuNhapChiuThue.value);
+      let tNTThue= tNCThue-11000000-pThuoc*4600000;
+      document.getElementById(thuNhapTinhThue).value=tNTThue;
+      if(tNTThue<=5000000){
+        tPNop=tNTThue*5/100;
+      } else if(tNTThue<=10000000){
+        tPNop=tNTThue*10/100;
+      } else if(tNTThue<=18000000){
+        tPNop=tNTThue*15/100;
+      } else if(tNTThue<=32000000){
+        tPNop=tNTThue*20/100;
+      } else if(tNTThue<=52000000){
+        tPNop=tNTThue*25/100;
+      } else if(tNTThue<=80000000){
+        tPNop=tNTThue*30/100;
+      } else {tPNop=tNTThue*35/100;}
+      document.getElementById("thuePhaiNop").value=tPNop;
+    }
+  </script>
+</html>

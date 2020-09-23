@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm đổi chỗ 2 số nguyên được nhập vào</title>
+</head>
+<body>
+    <script>
+        function swap(a,b){
+            let x=a;
+             a=b;
+             b=x;
+            return `${a},${b}`
+        }
+        let numa=prompt("Nhập vào số a");
+        let numb=prompt("Nhập vào số b");
+        document.write(swap(numa,numb));
+    </script>
+</body>
+</html>

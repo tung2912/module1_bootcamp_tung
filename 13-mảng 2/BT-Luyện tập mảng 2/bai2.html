@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập 1 mảng gồm các kí tự, sau đó in mảng ra theo thứ tự đảo ngược</title>
+</head>
+<body>
+    <h1>Viết chương trình in ra 1 mảng với các kí tự bị đảo ngược so với lúc được nhập vào</h1>
+    <input type="text" id="value">
+    <button type="button" onclick="nhapMang()">Nhập giá trị của mảng</button>
+    <button type="button" onclick="daoChieu()">Đảo ngược</button>
+    <div id="hienThiMang"></div>
+    <div id="mangDaoChieu"></div>
+</body>
+<script>
+    let A=new Array();
+    function nhapMang(){
+        let a= document.getElementById("value").value;
+        A.push(a);
+        document.getElementById("value").value="";
+        document.getElementById("hienThiMang").innerHTML=`Mảng A: ${A}`;
+    }
+    function daoChieu(){
+        A=A.reverse().join("");
+        document.getElementById("mangDaoChieu").innerHTML=`Mảng A sau khi đảo chiều và các phần tử được nối chuỗi là: ${A}`;
+    }
+</script>
+</html>

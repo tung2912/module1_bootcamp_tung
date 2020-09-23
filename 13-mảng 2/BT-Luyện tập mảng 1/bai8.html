@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp theo thứ tự giảm dần</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Sắp xếp mảng số nguyên theo thứ tự giảm dần</h1>
+    <input type="text" id="nhapSo">
+    <button onclick="nhap()">Add</button>
+    <button onclick="sapXep()">Sắp xếp</button>
+    <div id="hienThiMang"></div>
+    <div id="sortMang"></div>
+</body>
+<script>
+    let A=new Array();
+    let i=0;
+    function nhap(){
+        let i=+document.getElementById("nhapSo").value;
+        A.push(i);
+        document.getElementById("nhapSo").value="";
+        document.getElementById("hienThiMang").innerHTML=`Mảng ban đầu là : ${A}`;
+    }
+    function sapXep(){
+        A.sort(function(a,b){return b-a});
+        document.getElementById("sortMang").innerHTML=`Mảng sau khi được sắp xếp lại là : ${A}`;
+    }
+</script>
+</html>
